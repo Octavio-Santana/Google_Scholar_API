@@ -23,9 +23,19 @@
     
   Existe três formas de requisição:
     
-    localhost:5000/<nome da busca> -> Vai retornar as informações referente as 5 primeias páginas do site google scholar.
-    localhost:5000/<nome da busca>/pg=<numero> -> Retorna a informação referente a página escolhida, sendo que a primeira página refere-se ao numero 0.
-    localhost:5000/<nome da busca>/inicio=<n_i>&fim<n_f> -> Retorna as informações contidas entre as páginas n_i e n_f.
+    localhost:5000/<nome da busca> 
+    
+        Vai retornar as informações referente as 5 primeias páginas do site google scholar.
+    
+    
+    localhost:5000/<nome da busca>/pg=<numero> 
+    
+        Retorna a informação referente a página escolhida, sendo que a primeira página refere-se ao numero 0.
+    
+    
+    localhost:5000/<nome da busca>/inicio=<n_i>&fim<n_f> 
+    
+        Retorna as informações contidas entre as páginas n_i e n_f.
     
   Exemplo de busca:
     
