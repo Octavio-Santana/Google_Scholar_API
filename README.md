@@ -17,7 +17,7 @@
   
 ### Guia
 
-  Após executar o programa api.py, acesse com o navegador de sua preferencia o link, 
+  Após executar o programa api.py, acesse com o navegador de sua preferência o link, 
     
     localhost:5000/
     
@@ -25,7 +25,7 @@
     
     localhost:5000/<nome da busca> 
     
-        Vai retornar as informações referente as 5 primeias páginas do site google scholar.
+        Vai retornar as informações referente as 5 primerias páginas do site google scholar.
     
     
     localhost:5000/<nome da busca>/pg=<numero> 
