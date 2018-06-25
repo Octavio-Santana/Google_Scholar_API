@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
-from requests import get
+#from requests import get
+import requests
 
 class GoogleScholar:
     def __init__(self, busc, page=1):
@@ -7,6 +8,7 @@ class GoogleScholar:
         self.url_base = 'https://scholar.google.com.br/'
         self.busc = busc
         self.busc = '+'.join([x.lower() for x in self.busc.split()])
+        self.seesion = requests.Session()
 
     def title(self, bs):
         try:
@@ -21,7 +23,7 @@ class GoogleScholar:
         info = bs.find('div',{'class':'gs_a'}).text
         info = info.split('-')
         authors = info[0]
-        paper, *year = info[1].split(',')
+        paper, year = info[1].split(',')[0], info[1].split(',')[1]
         return authors, paper, year
 
     def links(self, bs):
@@ -38,7 +40,7 @@ class GoogleScholar:
 
     def pages(self, pg):
         url = 'https://scholar.google.com.br/scholar?start={}&q={}&hl=pt-BR&as_sdt=0,5'.format(str(pg), self.busc)
-        return get(url)
+        return self.session.get(url)
 
     def run(self, pg_i, pg_f):
         if pg_i:
